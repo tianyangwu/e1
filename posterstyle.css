@@ -1,7 +1,8 @@
 body{
-  background-color: rgb(24,69,142);
+  background-color: rgb(20,53,150);
   transform: rotate(25deg);
   position:relative;
+  margin-top: 150px;
 }
 p{
   font-family: 'Noto Sans', sans-serif;
@@ -30,6 +31,10 @@ p{
   position: absolute;
   left:130px;
   top: 245px;
+  transition: all 1s ease-out;
+}
+.block1:hover{
+  left:800px;
 }
 .block2{
   width: 40px;
@@ -38,6 +43,10 @@ p{
   position: absolute;
   left:390px;
   top: 0px;
+  transition: all 1s ease;
+}
+.block2:hover{
+  top:800px;
 }
 .block3{
   width: 40px;
@@ -47,6 +56,7 @@ p{
   left:390px;
   top: 400px;
 }
+
 .block4{
   width: 150px;
   height: 30px;
@@ -95,14 +105,7 @@ p{
   left:310px;
   top: 520px;
 }
-.block10{
-  width: 2px;
-  height: 100px;
-  background-color: white;
-  position: absolute;
-  left:350px;
-  top: 0px;
-}
+
 .block11{
   width: 2px;
   height: 250px;
@@ -118,15 +121,47 @@ p{
   position: absolute;
   left:350px;
   top: 600px;
+  animation-name: "bounce1";
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
+@keyframes bounce1 {
+  0%{
+    top: -40px;
+  }
+  80%{
+    top:800px;
+    background-color: rgb(20,53,150);
+  }
+  100%{
+    top: 0px;
+  }
+}
+
 .block13{
   width: 2px;
   height: 500px;
   background-color: white;
   position: absolute;
   left:505px;
-  top: 500px;
+  top: 400px;
+  animation-name: "bounce2";
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
+@keyframes bounce2 {
+  0%{
+    transform: translateY(400px);
+  }
+  75%{
+    transform: translateY(-400px);
+    background-color: rgb(20,53,150);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
 
 .block14{
     width: 350px;
